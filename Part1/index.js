@@ -1,5 +1,5 @@
 
-let gameProgress = []
+const gameProgress = [];
 
 function play(clickedId) {
     const playerSpan = document.getElementById('player');
@@ -62,16 +62,16 @@ function play(clickedId) {
         return
     }
 
-    for(i=0; i <= 8; i++){
+    let boardFull = true;
+    for(let i=0; i <= 8; i++){
         if(gameProgress[i] === undefined){
-            return 
+            boardFull = false;
+            
         }
-        if(gameProgress[i] === true){
+    }
+        if(boardFull === true){
             alert("No winner? No chicken dinner!")
         }
     }
 
-
-
-}
 
